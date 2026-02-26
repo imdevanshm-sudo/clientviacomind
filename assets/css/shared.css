@@ -47,10 +47,21 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   text-decoration: none;
+}
+
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100dvh;
 }
 
 .ticker-wrap {
@@ -73,6 +84,7 @@ a {
   white-space: nowrap;
   padding-right: 100%;
   animation: ticker 30s linear infinite;
+  will-change: transform;
 }
 
 @keyframes ticker {
@@ -137,4 +149,42 @@ html.dark textarea {
 html.dark input::placeholder,
 html.dark textarea::placeholder {
   color: #71717a !important;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .ticker {
+    animation-duration: 36s;
+  }
+
+  .logo-ticker {
+    animation-duration: 30s !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .prelaunch-theme-toggle {
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+    font-size: 10px;
+    padding: 0.55rem 0.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .arch-bg {
+    background-attachment: scroll !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker,
+  .logo-ticker {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
 }

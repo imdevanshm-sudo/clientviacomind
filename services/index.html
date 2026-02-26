@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#181110" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no,email=no,address=no" />
     <title>SaaS Explainer Spec Sheet | Viacom Production</title>
     <meta
       name="description"
@@ -62,7 +67,7 @@
       }
     </style>
   </head>
-  <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased h-screen flex flex-col overflow-hidden">
+  <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased min-h-screen flex flex-col overflow-x-hidden">
     <header class="flex-none flex items-center justify-between whitespace-nowrap border-b border-text-main dark:border-white/20 bg-white dark:bg-[#0d0d0d] px-6 py-4 z-50">
       <a href="/" class="flex items-center gap-4 text-text-main dark:text-white">
         <div class="size-6 text-primary"><span class="material-symbols-outlined !text-3xl">play_circle</span></div>
@@ -81,7 +86,7 @@
       <button type="button" id="menu-open" class="md:hidden text-text-main dark:text-white"><span class="material-symbols-outlined">menu</span></button>
     </header>
 
-    <main class="flex flex-1 h-full overflow-hidden relative">
+    <main class="relative flex flex-1 min-h-0 overflow-visible lg:overflow-hidden">
       <aside id="sidebar" class="w-full lg:w-[30%] bg-white dark:bg-[#0d0d0d] border-r border-text-main dark:border-white/20 flex flex-col p-8 lg:p-10 gap-8 h-full overflow-y-auto z-20 absolute lg:relative transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="flex flex-col gap-2">
           <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Service Spec #001</span>
