@@ -1,0 +1,140 @@
+:root {
+  --primary: #ff3d33;
+  --ink: #181110;
+  --paper: #f8f5f5;
+}
+
+.prelaunch-theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: "JetBrains Mono", "IBM Plex Mono", "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 0 #000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prelaunch-theme-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.prelaunch-theme-toggle:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+html.dark .prelaunch-theme-toggle {
+  border-color: #fff;
+  background: #0a0a0a;
+  color: #fff;
+  box-shadow: 3px 3px 0 0 #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  padding-left: 100%;
+}
+
+/* Skip heavy layout/paint work for below-the-fold blocks until needed. */
+.render-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
+.ticker {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+html.dark body,
+html.dark .bg-background-light,
+html.dark .bg-\[\#f8f5f5\],
+html.dark .bg-\[\#f4f4f0\] {
+  background-color: #050505 !important;
+  color: #f8fafc;
+}
+
+html.dark .bg-white,
+html.dark .bg-surface {
+  background-color: #0b0b0b !important;
+}
+
+html.dark .text-black,
+html.dark .text-\[\#181110\],
+html.dark .text-text-main,
+html.dark .text-slate-900,
+html.dark .text-viacom-black {
+  color: #f8fafc !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400,
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-slate-400,
+html.dark .text-text-muted {
+  color: #a1a1aa !important;
+}
+
+html.dark .border-black,
+html.dark .border-\[\#181110\],
+html.dark .border-text-main,
+html.dark .border-border-strong,
+html.dark .border-viacom-black,
+html.dark .border-gray-300,
+html.dark .border-gray-400 {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #111 !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #71717a !important;
+}

@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viacom Production Hub</title>
+    <meta
+      name="description"
+      content="Viacom India production hub for enterprise video, brand films, explainers, social ads, and multi-city campaign execution."
+    />
+    <link rel="canonical" href="https://viacomindia.com/" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&family=Material+Symbols+Outlined:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/shared.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff3d33",
+              "background-light": "#f4f4f0",
+              "background-dark": "#181110",
+              "border-strong": "#181110"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              condensed: ["Oswald", "sans-serif"],
+              mono: ["IBM Plex Mono", "monospace"]
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px"
+            },
+            boxShadow: {
+              brutalist: "4px 4px 0px 0px #000000"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #000;
+        padding-left: 100%;
+        box-sizing: content-box;
+      }
+      .ticker {
+        display: inline-block;
+        height: 3rem;
+        line-height: 3rem;
+        white-space: nowrap;
+        padding-right: 100%;
+        box-sizing: content-box;
+        animation: ticker 30s linear infinite;
+      }
+      @keyframes ticker {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      .text-gradient-silver {
+        background: linear-gradient(135deg, #ffffff 0%, #d1d1d1 25%, #a8a8a8 50%, #e0e0e0 75%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .logo-ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #f4f4f0;
+        border-top: 2px solid #000;
+        padding: 1.5rem 0;
+      }
+      .logo-ticker {
+        display: flex;
+        width: fit-content;
+        animation: logo-scroll 20s linear infinite;
+      }
+      @keyframes logo-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-[#181110] dark:text-white font-display antialiased selection:bg-black selection:text-white">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header class="sticky top-0 z-50 flex items-center justify-between border-b-2 border-border-strong dark:border-white/20 bg-background-light dark:bg-black px-6 py-4 lg:px-12">
+        <a href="/" class="flex items-center gap-2 text-[#181110] dark:text-white">
+          <div class="flex h-8 w-8 items-center justify-center bg-black text-white">
+            <span class="material-symbols-outlined text-[20px]">movie</span>
+          </div>
+          <h2 class="font-condensed text-2xl font-bold uppercase tracking-tight" data-brand-name>Viacom Hub</h2>
+        </a>
+        <nav class="hidden items-center gap-8 md:flex">
+          <a class="text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors" href="/services/">Marketplace</a>
+          <a class="text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors" href="/services/">Studios</a>
+          <a class="text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors" href="/creators/">Talent</a>
+          <a class="text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors" href="/vi-network/">Enterprise</a>
+        </nav>
+        <a href="/quote/" class="flex h-10 items-center justify-center bg-black px-6 text-sm font-bold text-white transition-transform hover:-translate-y-1 hover:shadow-brutalist active:translate-y-0 active:shadow-none">
+          START PROJECT
+        </a>
+      </header>
+
+      <main class="flex flex-col">
+        <section class="grid w-full grid-cols-1 border-b-2 border-border-strong dark:border-white/20 lg:grid-cols-12 lg:h-[75vh] min-h-[600px]">
+          <div class="relative flex flex-col justify-center px-6 py-12 lg:col-span-7 lg:px-12 xl:px-20 overflow-hidden bg-black">
+            <div class="absolute inset-0 z-0">
+              <img
+                alt="Cinematic black and white studio production"
+                class="h-full w-full object-cover opacity-60 grayscale brightness-75"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4m2qqVMH6TZiBT7ms1k4biKaCtg2opWCBG4F7GU6yunXq6dYQRCcani3j-AC_d60Tljp63Rwzm7jB9WmviikBh9Z_tQg7MDDDarNO2Ll33saYkNrG1sb9j44JGBi6nrM0omHAJTFXJnvc1QtogKGLmFs7fIBVKoVB6l4wyadU-W73rEP6xedMOLZcffNuX1aryFPHXRBzdCGDmbOZOGnqEFBfqWyg7A4YoUJsjOyOBG1kXrvGQ0brYG1ow7Rs0JZvMgZwtHvpd2A"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+            <div class="relative z-10 flex flex-col gap-6">
+              <span class="font-mono text-sm font-bold tracking-widest text-white/80">/// EST. 2014</span>
+              <h1 class="font-condensed text-6xl font-black uppercase leading-[0.85] tracking-tight text-white md:text-8xl xl:text-9xl">
+                <span class="text-gradient-silver">We Engineer<br />Video For<br />Brands That<br />Scale</span>
+              </h1>
+              <p class="max-w-md font-mono text-sm font-semibold leading-relaxed text-white/90 mt-4 backdrop-blur-sm bg-black/20 p-2 border-l-2 border-white/50" data-brand-tagline>
+                A unified digital marketplace for Viacom India's premier production services. Curated, vetted, and ready to deploy.
+              </p>
+              <div class="mt-4 flex gap-4">
+                <button
+                  type="button"
+                  data-showreel-open
+                  class="border-2 border-white bg-transparent px-8 py-3 font-bold uppercase text-white hover:bg-white hover:text-black transition-colors backdrop-blur-sm"
+                >
+                  View Showreel
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex items-center justify-center bg-black lg:col-span-5 grayscale border-l-2 border-border-strong dark:border-white/20 overflow-hidden group">
+            <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPPtkNSMl38DBptetmYIXXhoZ-Zc12cOfzANzNQfZdSfHB1vqeNPm4iMt16ppoYvA8tZD11cO01rAN2yczoqP5hi46THxTk26w1V_vzQYA1-cj1wg0aR-WWobJnRHm0_yPw-O73UnEEU3DxulFbJmpa2l_rLpAlfCuBlwTvqOIcF6QWa9o0LYQlfucW4SCMleNo6lkssU4GBggu1DSsg1sYMZepW8sknh8raK_C0gmwz-P1Fg3GoRxMPvtO51WK3JRnnD13WJl_j4');"></div>
+            <div class="relative z-10 flex flex-col items-center gap-2">
+              <button
+                type="button"
+                data-showreel-open
+                class="flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white transition-transform hover:scale-110 hover:bg-white hover:text-black"
+              >
+                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+              </button>
+              <span class="font-mono text-xs text-white tracking-widest mt-4">PLAY REEL [01:45]</span>
+            </div>
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+          </div>
+        </section>
+
+        <div class="border-b-2 border-border-strong dark:border-white/20 bg-black py-3 text-white">
+          <div class="ticker-wrap">
+            <div class="ticker font-mono text-lg font-bold tracking-widest" data-industries>
+              PREMIUM • CINEMATIC • NARRATIVE • COMMERCIAL • DOCUMENTARY • BRANDED CONTENT • PREMIUM • CINEMATIC • NARRATIVE • COMMERCIAL
+            </div>
+          </div>
+        </div>
+
+        <section class="render-lazy w-full px-6 py-16 lg:px-12 bg-background-light dark:bg-[#0d0d0d]">
+          <div class="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <h2 class="font-condensed text-5xl font-bold uppercase leading-none tracking-tight md:text-6xl">Marketplace</h2>
+              <p class="mt-2 font-mono text-sm text-gray-600 dark:text-gray-400">/// SELECT PRODUCTION TYPE</p>
+            </div>
+            <a class="group flex items-center gap-2 border-b-2 border-black dark:border-white pb-1 font-bold uppercase hover:text-primary hover:border-primary transition-colors" href="/services/">
+              View Full Grid
+              <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-[2px] border-2 border-black dark:border-white bg-black sm:grid-cols-2 lg:grid-cols-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)]">
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">animation</span>
+                <span class="font-mono text-xs font-bold text-gray-400">01</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Explainer<br />Videos</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">2D/3D animation for complex ideas and product breakdowns.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">business</span>
+                <span class="font-mono text-xs font-bold text-gray-400">02</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Corporate<br />Films</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">High-end brand storytelling for enterprise communications.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">campaign</span>
+                <span class="font-mono text-xs font-bold text-gray-400">03</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Social<br />Ads</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">High-tempo vertical video assets optimized for conversion.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">view_in_ar</span>
+                <span class="font-mono text-xs font-bold text-gray-400">04</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Product<br />Demos</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">Studio-quality product showcases with macro cinematography.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">videocam</span>
+                <span class="font-mono text-xs font-bold text-gray-400">05</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Event<br />Coverage</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">Full event production, live streaming, and recap edits.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+
+            <article class="group relative flex flex-col justify-between bg-white dark:bg-[#101010] p-8 transition-colors hover:bg-background-light dark:hover:bg-[#151515] h-80 border border-transparent hover:border-black/5 dark:hover:border-white/20">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-4xl group-hover:text-black dark:group-hover:text-white transition-colors">theaters</span>
+                <span class="font-mono text-xs font-bold text-gray-400">06</span>
+              </div>
+              <div>
+                <h3 class="font-condensed text-3xl font-bold uppercase leading-none mb-2">Documentary</h3>
+                <p class="font-display text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">Long-form narrative content for deeper audience engagement.</p>
+              </div>
+              <div class="absolute bottom-4 right-4 opacity-0 transition-opacity group-hover:opacity-100"><span class="material-symbols-outlined">arrow_outward</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="render-lazy border-t-2 border-black dark:border-white/20 bg-[#f4f4f0] dark:bg-[#0f0f0f] px-6 py-12 lg:px-12">
+          <div class="mx-auto max-w-[1400px]">
+            <h3 class="font-condensed text-4xl md:text-5xl font-bold uppercase tracking-tight">Our Clients &amp; Agencies</h3>
+            <p class="mt-2 max-w-4xl text-sm md:text-base text-gray-700 dark:text-gray-300">
+              It's an honor to partner with fantastic clients and to communicate their messages with a clear and creative voice.
+            </p>
+
+            <div class="mt-8 space-y-3">
+              <div class="overflow-hidden border border-black/10 dark:border-white/15 bg-white/40 dark:bg-[#111]/40">
+                <div class="logo-ticker py-3 gap-3" style="animation-duration: 38s;">
+                  <div class="flex items-center gap-3 px-3">
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Ciena</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Uno Minda</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Cushman &amp; Wakefield</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Tata Motors</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Neoris</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Killer</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Usha</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Larimar</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">HP</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Reliance Communications</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Indian Bank</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Momspresso</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Sunsilk</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">FPAI</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Musashi</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Yamaha</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">ICICI Bank</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-3" aria-hidden="true">
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Ciena</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Uno Minda</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Cushman &amp; Wakefield</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Tata Motors</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Neoris</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Killer</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Usha</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Larimar</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">HP</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Reliance Communications</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Indian Bank</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Momspresso</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Sunsilk</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">FPAI</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Musashi</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Yamaha</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">ICICI Bank</span>
+                  </div>
+                </div>
+              </div>
+              <div class="overflow-hidden border border-black/10 dark:border-white/15 bg-white/40 dark:bg-[#111]/40">
+                <div class="logo-ticker py-3 gap-3" style="animation-duration: 44s; animation-direction: reverse;">
+                  <div class="flex items-center gap-3 px-3">
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Continental Engines</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Singapore International Foundation</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Lawman PG3</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">UNICEF</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Coca-Cola</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">VVYN Media Group</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Shriram</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">&amp;pictures</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Naaptol</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Cello</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Keto.in</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Bilmed</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Intuit QuickBooks</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">BBC</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">HUL</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">New Swan</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Puckworthy</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Reforce</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">SoneObserver</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">JBM Group</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">NSDC</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Sanden</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Leeza</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Stellar</span>
+                  </div>
+                  <div class="flex items-center gap-3 px-3" aria-hidden="true">
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Continental Engines</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Singapore International Foundation</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Lawman PG3</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">UNICEF</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Coca-Cola</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">VVYN Media Group</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Shriram</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">&amp;pictures</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Naaptol</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Cello</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Keto.in</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Bilmed</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Intuit QuickBooks</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">BBC</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">HUL</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">New Swan</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Puckworthy</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Reforce</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">SoneObserver</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">JBM Group</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">NSDC</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Sanden</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Leeza</span>
+                    <span class="border border-black/10 dark:border-white/15 bg-white/70 dark:bg-[#111]/70 px-4 py-2 font-mono text-xs font-bold uppercase whitespace-nowrap">Stellar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="render-lazy border-t-2 border-border-strong dark:border-white/20 bg-white dark:bg-[#090909] px-6 py-20 lg:px-12 text-center">
+          <div class="mx-auto max-w-4xl">
+            <span class="font-mono text-sm font-bold tracking-widest text-gray-400 mb-4 block">/// READY TO SCALE?</span>
+            <h2 class="font-condensed text-5xl font-black uppercase leading-tight md:text-7xl">
+              Launch your project today with Viacom's vetted partners.
+            </h2>
+            <div class="mt-12 flex justify-center">
+              <a href="/quote/" class="flex h-16 min-w-[240px] items-center justify-center border-2 border-black dark:border-white bg-black px-8 text-lg font-bold text-white transition-all hover:bg-white hover:text-black hover:shadow-brutalist">
+                START PROJECT NOW
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t-2 border-border-strong dark:border-white/20 bg-black py-12 text-white">
+        <div class="px-6 lg:px-12">
+          <div class="flex flex-col justify-between gap-12 md:flex-row">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[20px]">movie</span>
+                <h2 class="font-condensed text-xl font-bold uppercase" data-brand-name>Viacom Hub</h2>
+              </div>
+              <p class="max-w-xs font-mono text-xs text-gray-400">
+                © 2026 Viacom India. All rights reserved.<br />
+                Designed for scale.
+              </p>
+            </div>
+            <div class="flex gap-12 font-mono text-sm">
+              <div class="flex flex-col gap-2">
+                <span class="font-bold text-gray-500 mb-2">PLATFORM</span>
+                <a class="hover:text-primary" href="/services/">Marketplace</a>
+                <a class="hover:text-primary" href="/work/">Work</a>
+                <a class="hover:text-primary" href="/quote/">Pricing</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="font-bold text-gray-500 mb-2">LEGAL</span>
+                <a class="hover:text-primary" href="/privacy-policy/">Privacy</a>
+                <a class="hover:text-primary" href="/terms-and-condition/brand-terms-and-conditions/">Terms</a>
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="font-bold text-gray-500 mb-2">SOCIAL</span>
+                <a class="hover:text-primary" href="https://www.instagram.com/viacomindia" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="hover:text-primary" href="https://www.linkedin.com/company/viacom-india" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div
+        data-showreel-modal
+        data-video-ids="HDcG6zPha90,SiYc2JpKf1A,iTEuN0fERC8,jkttdhu8W0E"
+        data-video-titles="Corporate Showreel|Brand Story Cut|Digital Campaign Reel|Production Highlights"
+        class="hidden fixed inset-0 z-[70] items-center justify-center bg-black/85 p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Viacom India showreel"
+      >
+        <div class="w-full max-w-5xl border-2 border-white bg-black shadow-[0_0_0_2px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center justify-between border-b border-white/20 px-4 py-3 text-white">
+            <p class="font-mono text-xs font-bold uppercase tracking-widest">Viacom India Showreel</p>
+            <div class="flex items-center gap-2">
+              <button type="button" data-showreel-prev class="inline-flex items-center justify-center border border-white/30 p-1.5 hover:bg-white hover:text-black transition-colors" aria-label="Previous reel">
+                <span class="material-symbols-outlined text-base">arrow_back</span>
+              </button>
+              <span data-showreel-counter class="font-mono text-[11px] font-bold uppercase tracking-wider text-white/80">1 / 4</span>
+              <button type="button" data-showreel-next class="inline-flex items-center justify-center border border-white/30 p-1.5 hover:bg-white hover:text-black transition-colors" aria-label="Next reel">
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </button>
+              <button type="button" data-showreel-close class="inline-flex items-center gap-1 border border-white/30 px-3 py-1 text-xs font-bold uppercase hover:bg-white hover:text-black transition-colors">
+                <span class="material-symbols-outlined text-sm">close</span>
+                Close
+              </button>
+            </div>
+          </div>
+          <div class="aspect-video w-full bg-black">
+            <iframe
+              data-showreel-frame
+              class="h-full w-full"
+              src=""
+              title="Viacom India Showreel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="overflow-x-auto border-t border-white/20 px-4 py-3">
+            <div data-showreel-strip class="flex min-w-full gap-3"></div>
+          </div>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-t border-white/20 px-4 py-3 text-xs font-mono text-white/80">
+            <span>Streaming from Viacom India TV.</span>
+            <a class="inline-flex items-center gap-1 font-bold uppercase text-white hover:text-primary transition-colors" href="https://www.youtube.com/c/ViacomIndiatv/videos" target="_blank" rel="noopener noreferrer">
+              Open Channel
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { hydrateSharedContent } from "/assets/js/site-content.js";
+      import { initShowreelModal } from "/assets/js/showreel-modal.js";
+      hydrateSharedContent().catch((error) => console.error(error));
+      initShowreelModal();
+    </script>
+    <script src="/assets/js/prelaunch-theme-toggle.js" defer></script>
+  </body>
+</html>

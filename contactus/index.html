@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Viacom India | Enterprise Intake</title>
+    <meta
+      name="description"
+      content="Contact Viacom India for campaign planning, production execution, and creator-led delivery. API-ready lead capture with fallback transport."
+    />
+    <link rel="canonical" href="https://viacomindia.com/contactus/" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/shared.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff3d33",
+              "background-light": "#f8f5f5",
+              "background-dark": "#1a0b0a",
+              ink: "#181110"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              header: ["Oswald", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"]
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-ink dark:text-white min-h-screen font-display">
+    <header class="sticky top-0 z-50 border-b-2 border-ink dark:border-white/15 bg-white dark:bg-[#120908]/95 backdrop-blur-md">
+      <div class="mx-auto max-w-[1320px] px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="size-8 bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-[18px]">support_agent</span></div>
+          <h1 class="font-header text-2xl uppercase font-bold tracking-tight" data-brand-name>Viacom India</h1>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="/services/" class="font-mono text-xs uppercase tracking-wide hover:text-primary">Services</a>
+          <a href="/work/" class="font-mono text-xs uppercase tracking-wide hover:text-primary">Work</a>
+          <a href="/timeline/" class="font-mono text-xs uppercase tracking-wide hover:text-primary">Timeline</a>
+          <a href="/contactus/" class="font-mono text-xs uppercase tracking-wide text-primary font-bold">Contact</a>
+        </nav>
+        <a href="/quote/" class="border-2 border-ink dark:border-white px-4 py-2 text-xs font-mono uppercase font-bold hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink transition-colors">Estimator</a>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-[1320px] px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <section class="lg:col-span-7">
+        <span class="inline-block bg-ink dark:bg-white text-white dark:text-ink px-2 py-1 font-mono text-[10px] uppercase font-bold">Enterprise Intake</span>
+        <h2 class="mt-4 font-header text-6xl md:text-7xl uppercase font-bold leading-[0.9] tracking-tight">Tell us what you need to ship.</h2>
+        <p class="mt-4 text-base text-black/70 dark:text-white/70 max-w-3xl">Launch mode is backend-agnostic: client validation + transport abstraction + mail/WhatsApp fallback.</p>
+
+        <form id="lead-form" class="mt-8 space-y-5 border-2 border-ink dark:border-white bg-white dark:bg-[#0f0f0f] p-6">
+          <div class="grid gap-5 md:grid-cols-2">
+            <label class="text-sm font-medium">Full Name *
+              <input name="fullName" type="text" required class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" />
+            </label>
+            <label class="text-sm font-medium">Email *
+              <input name="email" type="email" required class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" />
+            </label>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <label class="text-sm font-medium">Phone *
+              <input name="phone" type="tel" required class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" />
+            </label>
+            <label class="text-sm font-medium">Website (optional)
+              <input name="website" type="url" placeholder="https://" class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" />
+            </label>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <label class="text-sm font-medium">Inquiry Type *
+              <select name="inquiryType" required class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary">
+                <option value="">Select...</option>
+                <option value="New campaign">New campaign</option>
+                <option value="Retainer production">Retainer production</option>
+                <option value="One-off video project">One-off video project</option>
+                <option value="Creator-led campaign">Creator-led campaign</option>
+              </select>
+            </label>
+            <label class="text-sm font-medium">Service Interest
+              <input name="serviceInterest" type="text" placeholder="Brand Film, Explainer, Social Ads" class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" />
+            </label>
+          </div>
+          <label class="block text-sm font-medium">Budget Range
+            <select name="budgetRange" class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary">
+              <option value="">Select...</option>
+              <option value="Under $2,000">Under $2,000</option>
+              <option value="$2,000-$5,000">$2,000-$5,000</option>
+              <option value="$5,000-$10,000">$5,000-$10,000</option>
+              <option value="$10,000+">$10,000+</option>
+            </select>
+          </label>
+          <label class="block text-sm font-medium">Project Brief *
+            <textarea name="message" required rows="5" class="mt-2 w-full border-2 border-ink dark:border-white/20 bg-background-light dark:bg-black px-3 py-3 text-sm focus:border-primary" placeholder="Goals, timeline, expected deliverables, and launch date."></textarea>
+          </label>
+
+          <div id="lead-errors" class="hidden border-2 border-red-700 bg-red-50 p-4 text-sm text-red-800"></div>
+          <div id="lead-status" class="hidden"></div>
+
+          <button type="submit" class="inline-flex items-center gap-2 border-2 border-ink dark:border-white bg-ink dark:bg-white px-6 py-3 text-xs font-bold uppercase text-white dark:text-ink hover:bg-primary hover:text-white transition-colors">
+            Submit Brief
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </button>
+        </form>
+
+        <section id="lead-fallback" class="mt-6 hidden border-2 border-ink dark:border-white bg-white dark:bg-[#0f0f0f] p-6">
+          <h3 class="font-header text-2xl uppercase">Manual fallback options</h3>
+          <p class="mt-2 text-sm text-black/70 dark:text-white/70">If email/WhatsApp did not open, use direct contacts and copy/download your structured lead summary.</p>
+          <div class="mt-4 space-y-1 text-sm">
+            <p>Email: <a data-contact-email-link data-contact-email href="mailto:contact@viacomindia.com" class="font-semibold underline">contact@viacomindia.com</a></p>
+            <p>Phone: <a data-contact-phone-link data-contact-phone href="tel:+919987773202" class="font-semibold underline">+91 99877 73202</a></p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <button data-copy-summary type="button" class="border-2 border-ink dark:border-white px-4 py-2 text-xs font-bold uppercase hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink">Copy Summary</button>
+            <button data-download-summary type="button" class="border-2 border-ink dark:border-white px-4 py-2 text-xs font-bold uppercase hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink">Download Summary</button>
+          </div>
+          <pre data-lead-summary class="mt-4 max-h-56 overflow-auto border-2 border-ink dark:border-white bg-background-light dark:bg-black p-3 text-xs"></pre>
+        </section>
+      </section>
+
+      <aside class="lg:col-span-5 space-y-6">
+        <section class="border-2 border-ink dark:border-white bg-white dark:bg-[#0f0f0f] p-6">
+          <h3 class="font-header text-3xl uppercase">Regional Offices</h3>
+          <p class="mt-2 text-sm text-black/70 dark:text-white/70" data-cities></p>
+          <div class="mt-4 grid gap-3" data-office-cards></div>
+        </section>
+
+        <section class="border-2 border-ink dark:border-white bg-white dark:bg-[#0f0f0f] p-6">
+          <h3 class="font-header text-3xl uppercase">Direct Inquiry Lines</h3>
+          <div class="mt-3 space-y-2 text-sm">
+            <p><strong>Video Inquiries:</strong> <a data-contact-phone-link data-contact-phone href="tel:+919717337326" class="underline">+91 97173 37326</a></p>
+            <p><strong>Brand Inquiries:</strong> <a href="tel:+917208999001" class="underline">+91 72089 99001</a></p>
+            <p><strong>Business Inquiries:</strong> <a href="tel:+911245180499" class="underline">+91 124 518 0499</a></p>
+            <p><strong>Email:</strong> <a data-contact-email-link data-contact-email href="mailto:contact@viacomindia.com" class="underline">contact@viacomindia.com</a></p>
+          </div>
+        </section>
+
+        <section class="border-2 border-ink dark:border-white bg-primary text-black p-6">
+          <h3 class="font-header text-3xl uppercase">Service Snapshot</h3>
+          <p class="mt-3 text-sm font-semibold" data-services></p>
+        </section>
+      </aside>
+    </main>
+
+    <script src="/assets/js/env.js"></script>
+    <script type="module">
+      import { initLeadForm } from "/assets/js/lead-form.js";
+      initLeadForm().catch((error) => console.error(error));
+    </script>
+    <script src="/assets/js/prelaunch-theme-toggle.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "brand": {
+    "name": "Viacom India",
+    "tagline": "India's Preferred Content Production Services Agency",
+    "founded": 2014,
+    "summary": "Viacom India delivers end-to-end content production for brands, agencies, and growth teams across India."
+  },
+  "stats": {
+    "videosProduced": "30,000+",
+    "jobsCreated": "200,000+",
+    "brandsServed": "4,500+",
+    "citiesCovered": "900+"
+  },
+  "contacts": {
+    "leadEmail": "contact@viacomindia.com",
+    "supportEmail": "support@viacomindia.com",
+    "phones": [
+      "+91 97173 37326",
+      "+91 72089 99001",
+      "+91 124 518 0499"
+    ],
+    "whatsapp": "+91 97173 37326"
+  },
+  "cities": [
+    "Gurugram",
+    "Mumbai",
+    "Bengaluru",
+    "Surat",
+    "Pune",
+    "Bokaro"
+  ],
+  "offices": [
+    {
+      "city": "Gurugram",
+      "address": "Sushant Lok, Gurugram, Haryana"
+    },
+    {
+      "city": "Mumbai",
+      "address": "Bhandup, Mumbai, Maharashtra"
+    },
+    {
+      "city": "Bengaluru",
+      "address": "Wilson Garden, Bengaluru, Karnataka"
+    },
+    {
+      "city": "Surat",
+      "address": "Athwalines, Surat, Gujarat"
+    },
+    {
+      "city": "Pune",
+      "address": "Boat Club Road, Pune, Maharashtra"
+    },
+    {
+      "city": "Bokaro",
+      "address": "Lohar Kulli, Jharkhand"
+    }
+  ],
+  "services": [
+    "Explainer Videos",
+    "Product Demo Videos",
+    "Branding Videos",
+    "Corporate Videos",
+    "Training Videos",
+    "Ad Film Production",
+    "Social Media Videos",
+    "Testimonial Videos",
+    "Educational Videos",
+    "2D and 3D Animated Videos",
+    "Infographic Videos"
+  ],
+  "industries": [
+    "SaaS",
+    "Healthcare",
+    "Fintech",
+    "E-learning",
+    "Real Estate",
+    "Travel",
+    "Hospitality",
+    "Automobile",
+    "FMCG",
+    "Retail"
+  ],
+  "networkOfferings": [
+    "On-demand video and creative teams",
+    "Brand strategy plus production operations",
+    "Regional creator collaborations",
+    "Campaign analytics and optimization"
+  ],
+  "creators": {
+    "summary": "Viacom Creators is a curated network of filmmakers, editors, motion artists, and campaign specialists helping brands ship faster.",
+    "roles": [
+      "Scriptwriters",
+      "Directors",
+      "Editors",
+      "Motion Designers",
+      "Photographers",
+      "Social Strategists"
+    ]
+  },
+  "legal": {
+    "brandTermsVersion": "2026-01",
+    "creatorTermsVersion": "2026-01",
+    "privacyVersion": "2026-01"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/viacomindia",
+    "linkedin": "https://www.linkedin.com/company/viacom-india"
+  }
+}

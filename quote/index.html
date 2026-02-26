@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Quote Calculator | Viacom Markets</title>
+    <meta
+      name="description"
+      content="Enterprise quote calculator for production scope, complexity, duration classes, and add-on pricing."
+    />
+    <link rel="canonical" href="https://viacomindia.com/quote/" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&family=Space+Grotesk:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/shared.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff3d33",
+              "background-light": "#f8f5f5",
+              "background-dark": "#1a0b0a",
+              "viacom-black": "#181110",
+              "surface-dark": "#23100f"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              header: ["Oswald", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {
+              DEFAULT: "0rem",
+              lg: "0rem",
+              xl: "0rem",
+              full: "0rem"
+            }
+          }
+        }
+      };
+    </script>
+    <style type="text/tailwindcss">
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 24px;
+        width: 12px;
+        background: #ff3d33;
+        cursor: pointer;
+        margin-top: -10px;
+        border: 2px solid #181110;
+      }
+      .dark input[type="range"]::-webkit-slider-thumb {
+        border: 2px solid white;
+      }
+      input[type="range"]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: #e5e5e5;
+      }
+      .dark input[type="range"]::-webkit-slider-runnable-track {
+        background: #333;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display selection:bg-primary selection:text-white">
+    <header class="w-full border-b-2 border-viacom-black dark:border-white/10 bg-white dark:bg-surface-dark px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+      <a href="/" class="flex items-center gap-3 text-viacom-black dark:text-white">
+        <div class="size-8 bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-xl font-bold">diamond</span></div>
+        <h2 class="font-header text-2xl font-bold uppercase tracking-tight" data-brand-name>Viacom Enterprise</h2>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-viacom-black dark:text-white font-mono text-xs uppercase hover:underline underline-offset-4" href="/services/">Global Services</a>
+        <a class="text-viacom-black dark:text-white font-mono text-xs uppercase hover:underline underline-offset-4" href="/work/">Case Studies</a>
+        <a class="text-viacom-black dark:text-white font-mono text-xs uppercase hover:underline underline-offset-4 font-bold text-primary" href="/quote/">Estimator</a>
+        <a class="text-viacom-black dark:text-white font-mono text-xs uppercase hover:underline underline-offset-4" href="/contactus/">Concierge</a>
+      </nav>
+      <div class="hidden md:flex gap-4">
+        <a href="/contactus/" class="flex items-center justify-center border-2 border-viacom-black dark:border-white/20 text-viacom-black dark:text-white px-6 py-2 font-mono text-xs font-bold uppercase hover:bg-viacom-black/5 dark:hover:bg-white/5 transition-colors duration-200">
+          Client Portal
+        </a>
+      </div>
+      <a class="md:hidden text-viacom-black dark:text-white" href="/contactus/"><span class="material-symbols-outlined">menu</span></a>
+    </header>
+
+    <main class="flex-grow grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-80px)]">
+      <section class="lg:col-span-7 border-r-2 border-viacom-black dark:border-white/10 p-8 lg:p-12 flex flex-col bg-white dark:bg-surface-dark overflow-y-auto">
+        <div class="max-w-2xl w-full mx-auto">
+          <div class="mb-10">
+            <div class="inline-block bg-viacom-black dark:bg-white text-white dark:text-viacom-black px-2 py-1 font-mono text-[10px] uppercase font-bold mb-4">Enterprise Edition</div>
+            <h1 class="font-header text-5xl lg:text-6xl font-bold uppercase text-viacom-black dark:text-white leading-[0.9] tracking-tighter mb-4">Project Scope</h1>
+            <p class="font-mono text-sm text-viacom-black/60 dark:text-white/60 uppercase tracking-wide">Configure high-value production parameters</p>
+          </div>
+
+          <form class="space-y-8" id="enterprise-quote-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="group">
+                <label class="block font-mono text-xs font-bold uppercase text-viacom-black dark:text-white mb-2">Project Reference</label>
+                <input
+                  id="project-reference"
+                  class="w-full bg-background-light dark:bg-white/5 border-2 border-viacom-black dark:border-white/20 px-4 py-3 font-display text-base focus:outline-none focus:border-primary focus:ring-0 placeholder:text-viacom-black/30 dark:placeholder:text-white/30 transition-colors"
+                  placeholder="Internal ID / Name"
+                  type="text"
+                />
+              </div>
+              <div class="group">
+                <label class="block font-mono text-xs font-bold uppercase text-viacom-black dark:text-white mb-2">Vertical</label>
+                <div class="relative">
+                  <select id="vertical" class="w-full appearance-none bg-background-light dark:bg-white/5 border-2 border-viacom-black dark:border-white/20 px-4 py-3 font-display text-base focus:outline-none focus:border-primary focus:ring-0 text-viacom-black dark:text-white cursor-pointer transition-colors">
+                    <option value="0" selected>Fintech &amp; Banking</option>
+                    <option value="100000">Global Retail</option>
+                    <option value="180000">Automotive High-End</option>
+                    <option value="220000">Pharmaceuticals</option>
+                  </select>
+                  <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-viacom-black dark:text-white"><span class="material-symbols-outlined text-lg">expand_more</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-2 border-viacom-black dark:border-white/20 p-6 bg-background-light dark:bg-white/5">
+              <div class="flex justify-between items-end mb-6">
+                <label class="block font-mono text-xs font-bold uppercase text-viacom-black dark:text-white"><span class="material-symbols-outlined align-bottom text-lg mr-1 text-primary">tune</span>Complexity Level</label>
+                <span id="tier-label" class="font-header text-2xl font-bold text-viacom-black dark:text-white">TIER 3</span>
+              </div>
+              <input id="complexity" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 mb-8 focus:outline-none focus:ring-0" max="5" min="1" type="range" value="3" />
+              <div class="grid grid-cols-4 gap-4 h-24 items-end border-b border-viacom-black/10 dark:border-white/10 pb-2">
+                <div class="flex flex-col gap-2"><div id="bar-crew" class="w-full bg-viacom-black/20 dark:bg-white/20 h-[40%]"></div><span class="text-[10px] font-mono uppercase text-center text-viacom-black/60 dark:text-white/60">Crew</span></div>
+                <div class="flex flex-col gap-2"><div id="bar-equipment" class="w-full bg-viacom-black/40 dark:bg-white/40 h-[65%]"></div><span class="text-[10px] font-mono uppercase text-center text-viacom-black/60 dark:text-white/60">Equipment</span></div>
+                <div class="flex flex-col gap-2"><div id="bar-post" class="w-full bg-viacom-black/60 dark:bg-white/60 h-[80%]"></div><span class="text-[10px] font-mono uppercase text-center text-viacom-black/60 dark:text-white/60">Post-Prod</span></div>
+                <div class="flex flex-col gap-2"><div id="bar-licensing" class="w-full bg-viacom-black/80 dark:bg-white/80 h-[100%]"></div><span class="text-[10px] font-mono uppercase text-center text-viacom-black/60 dark:text-white/60">Licensing</span></div>
+              </div>
+              <div class="mt-2 flex justify-between text-[10px] font-mono text-viacom-black/40 dark:text-white/40 uppercase"><span>Standard</span><span>Cinematic</span></div>
+            </div>
+
+            <div class="group">
+              <label class="block font-mono text-xs font-bold uppercase text-viacom-black dark:text-white mb-2">Duration Class</label>
+              <div class="grid grid-cols-4 gap-0 border-2 border-viacom-black dark:border-white/20 bg-background-light dark:bg-white/5">
+                <label class="cursor-pointer relative"><input class="duration peer sr-only" name="duration" type="radio" value="0" /><div class="h-full py-3 text-center font-display text-sm font-medium border-r-2 border-viacom-black dark:border-white/20 peer-checked:bg-viacom-black peer-checked:text-white dark:peer-checked:bg-primary hover:bg-viacom-black/5 dark:hover:bg-white/10 transition-colors">:15 Spot</div></label>
+                <label class="cursor-pointer relative"><input class="duration peer sr-only" name="duration" type="radio" value="90000" checked /><div class="h-full py-3 text-center font-display text-sm font-medium border-r-2 border-viacom-black dark:border-white/20 peer-checked:bg-viacom-black peer-checked:text-white dark:peer-checked:bg-primary hover:bg-viacom-black/5 dark:hover:bg-white/10 transition-colors">:30 TVC</div></label>
+                <label class="cursor-pointer relative"><input class="duration peer sr-only" name="duration" type="radio" value="240000" /><div class="h-full py-3 text-center font-display text-sm font-medium border-r-2 border-viacom-black dark:border-white/20 peer-checked:bg-viacom-black peer-checked:text-white dark:peer-checked:bg-primary hover:bg-viacom-black/5 dark:hover:bg-white/10 transition-colors">:60 Anthem</div></label>
+                <label class="cursor-pointer relative"><input class="duration peer sr-only" name="duration" type="radio" value="450000" /><div class="h-full py-3 text-center font-display text-sm font-medium peer-checked:bg-viacom-black peer-checked:text-white dark:peer-checked:bg-primary hover:bg-viacom-black/5 dark:hover:bg-white/10 transition-colors">Long Form</div></label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <aside class="lg:col-span-5 bg-background-light dark:bg-[#150a09] p-8 lg:p-12 flex flex-col relative overflow-y-auto">
+        <div class="flex-grow">
+          <div class="flex items-center gap-3 mb-8 border-b-2 border-viacom-black dark:border-white/10 pb-4">
+            <span class="material-symbols-outlined text-primary">add_circle</span>
+            <h3 class="font-header text-2xl font-bold uppercase text-viacom-black dark:text-white">Premium Add-ons</h3>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4" id="addons-grid">
+            <label class="cursor-pointer group relative"><input data-kind="percent" data-value="20" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">rocket_launch</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Rush Delivery</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+20% | 48h Turnaround</p></div></label>
+            <label class="cursor-pointer group relative"><input data-kind="flat" data-value="50000" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">folder_zip</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Source Files</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+INR 50k | 8K RAW</p></div></label>
+            <label class="cursor-pointer group relative"><input data-kind="flat" data-value="25000" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">mic</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Pro Voiceover</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+INR 25k | Studio Recording</p></div></label>
+            <label class="cursor-pointer group relative"><input data-kind="flat" data-value="15000" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">share</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Social Pack</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+INR 15k | 9:16 &amp; 4:5</p></div></label>
+            <label class="cursor-pointer group relative"><input data-kind="flat" data-value="30000" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">translate</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Localization</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+INR 30k | Subtitles (5 Lang)</p></div></label>
+            <label class="cursor-pointer group relative"><input data-kind="flat" data-value="10000" class="addon peer sr-only" type="checkbox" /><div class="border-2 border-viacom-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 h-full hover:border-viacom-black dark:hover:border-white/40 peer-checked:border-primary peer-checked:bg-primary/5 transition-all"><div class="flex justify-between items-start mb-2"><span class="material-symbols-outlined text-viacom-black dark:text-white group-hover:text-primary transition-colors">accessibility_new</span><div class="w-4 h-4 border border-viacom-black dark:border-white/40 peer-checked:bg-primary peer-checked:border-primary transition-colors"></div></div><p class="font-header font-bold text-sm uppercase text-viacom-black dark:text-white leading-tight">Accessibility</p><p class="font-mono text-[10px] text-viacom-black/50 dark:text-white/50 mt-1">+INR 10k | AD &amp; CC</p></div></label>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t-2 border-viacom-black dark:border-white/10">
+          <div class="flex justify-between items-end mb-6">
+            <div>
+              <p class="font-mono text-xs uppercase text-viacom-black/60 dark:text-white/60 mb-1">Estimated Budget</p>
+              <div id="estimated-total" class="font-header text-5xl lg:text-6xl font-bold text-viacom-black dark:text-white">INR 12,450,000</div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <button id="proposal-download-btn" class="w-full bg-viacom-black dark:bg-primary text-white font-mono text-base font-bold uppercase py-4 px-6 hover:bg-viacom-black/90 dark:hover:bg-primary/90 transition-colors duration-200 flex items-center justify-between group" type="button">
+              <span>Generate Proposal PDF</span>
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
+            </button>
+            <a href="/contactus/" class="w-full bg-white dark:bg-transparent border-2 border-viacom-black dark:border-white/20 text-viacom-black dark:text-white font-mono text-sm font-bold uppercase py-4 px-6 hover:bg-viacom-black hover:text-white dark:hover:bg-white dark:hover:text-viacom-black transition-all duration-200 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">support_agent</span>
+              <span>Talk to an Executive</span>
+            </a>
+          </div>
+          <p id="proposal-action-status" class="hidden text-center font-mono text-[10px] uppercase mt-3"></p>
+          <p class="text-center font-mono text-[10px] uppercase text-viacom-black/40 dark:text-white/30 mt-4">* Indicative pricing for enterprise agreements.</p>
+        </div>
+        <div class="absolute bottom-0 right-0 w-32 h-32 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+      </aside>
+    </main>
+
+    <script type="module">
+      import { hydrateSharedContent } from "/assets/js/site-content.js";
+
+      hydrateSharedContent().catch((error) => console.error(error));
+
+      const complexityInput = document.getElementById("complexity");
+      const tierLabel = document.getElementById("tier-label");
+      const verticalSelect = document.getElementById("vertical");
+      const durationInputs = [...document.querySelectorAll(".duration")];
+      const addons = [...document.querySelectorAll(".addon")];
+      const totalEl = document.getElementById("estimated-total");
+      const proposalBtn = document.getElementById("proposal-download-btn");
+      const proposalStatus = document.getElementById("proposal-action-status");
+
+      const complexityBands = {
+        1: { label: "TIER 1", multiplier: 1.0 },
+        2: { label: "TIER 2", multiplier: 1.25 },
+        3: { label: "TIER 3", multiplier: 1.5 },
+        4: { label: "TIER 4", multiplier: 1.85 },
+        5: { label: "TIER 5", multiplier: 2.25 }
+      };
+
+      let latestEstimate = 0;
+
+      function setProposalStatus(message, variant = "info") {
+        if (!proposalStatus) return;
+        const styles = {
+          info: "text-viacom-black/60 dark:text-white/60",
+          success: "text-green-700 dark:text-green-400",
+          warn: "text-yellow-700 dark:text-yellow-300"
+        };
+        proposalStatus.className = `text-center font-mono text-[10px] uppercase mt-3 ${styles[variant] || styles.info}`;
+        proposalStatus.textContent = message;
+        proposalStatus.classList.remove("hidden");
+      }
+
+      function escapeHtml(value) {
+        return (value || "").toString().replace(/[&<>"']/g, (char) => {
+          const map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+          return map[char];
+        });
+      }
+
+      function selectedDurationLabel() {
+        const selected = durationInputs.find((input) => input.checked);
+        if (!selected) return "Custom";
+        const label = selected.closest("label");
+        return label ? label.textContent.trim().replace(/\s+/g, " ") : "Custom";
+      }
+
+      function selectedAddonLabels() {
+        return addons
+          .filter((addon) => addon.checked)
+          .map((addon) => addon.closest("label"))
+          .filter(Boolean)
+          .map((label) => {
+            const nameEl = label.querySelector("p");
+            return nameEl ? nameEl.textContent.trim() : "Add-on";
+          });
+      }
+
+      function formatCurrency(value) {
+        return new Intl.NumberFormat("en-IN", {
+          style: "currency",
+          currency: "INR",
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function buildProposalText() {
+        const projectReference = document.getElementById("project-reference")?.value?.trim() || "Untitled Project";
+        const verticalLabel = verticalSelect.options[verticalSelect.selectedIndex]?.text || "Not set";
+        const complexityLabel = tierLabel.textContent || "Tier 3";
+        const durationLabel = selectedDurationLabel();
+        const addonItems = selectedAddonLabels();
+        const addonLine = addonItems.length ? addonItems.join(", ") : "None selected";
+
+        return [
+          "VIACOM INDIA - ENTERPRISE PROPOSAL",
+          "",
+          `Project Reference: ${projectReference}`,
+          `Vertical: ${verticalLabel}`,
+          `Complexity: ${complexityLabel}`,
+          `Duration: ${durationLabel}`,
+          `Add-ons: ${addonLine}`,
+          `Estimated Budget: ${formatCurrency(latestEstimate)}`,
+          "",
+          "Indicative pricing for enterprise agreements.",
+          `Generated: ${new Date().toLocaleString("en-IN")}`
+        ].join("\n");
+      }
+
+      function openPrintableProposal(textContent) {
+        const popup = window.open("", "_blank", "noopener,noreferrer");
+        if (!popup) return false;
+
+        popup.document.write(`<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viacom Proposal</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 32px; color: #111; }
+      h1 { margin: 0 0 24px; font-size: 20px; letter-spacing: 0.06em; }
+      pre { white-space: pre-wrap; font-size: 14px; line-height: 1.7; }
+    </style>
+  </head>
+  <body>
+    <h1>Viacom India Enterprise Proposal</h1>
+    <pre>${escapeHtml(textContent)}</pre>
+  </body>
+</html>`);
+        popup.document.close();
+        popup.focus();
+        setTimeout(() => popup.print(), 250);
+        return true;
+      }
+
+      function downloadProposalFallback(textContent) {
+        const blob = new Blob([textContent], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `viacom-proposal-${Date.now()}.txt`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function updateBars(level) {
+        const crew = document.getElementById("bar-crew");
+        const equipment = document.getElementById("bar-equipment");
+        const post = document.getElementById("bar-post");
+        const licensing = document.getElementById("bar-licensing");
+        const pct = Math.min(100, 20 + level * 16);
+        crew.style.height = `${Math.max(30, pct - 40)}%`;
+        equipment.style.height = `${Math.max(45, pct - 20)}%`;
+        post.style.height = `${Math.max(60, pct - 8)}%`;
+        licensing.style.height = `${Math.max(75, pct)}%`;
+      }
+
+      function selectedDurationValue() {
+        const selected = durationInputs.find((input) => input.checked);
+        return selected ? Number(selected.value || 0) : 0;
+      }
+
+      function computeTotal() {
+        const base = 600000;
+        const verticalPremium = Number(verticalSelect.value || 0);
+        const durationPremium = selectedDurationValue();
+        const level = Number(complexityInput.value || 3);
+        const { label, multiplier } = complexityBands[level] || complexityBands[3];
+
+        let flatAddons = 0;
+        let percentAddons = 0;
+
+        addons.forEach((addon) => {
+          if (!addon.checked) return;
+          const value = Number(addon.dataset.value || 0);
+          if (addon.dataset.kind === "percent") {
+            percentAddons += value;
+          } else {
+            flatAddons += value;
+          }
+        });
+
+        const subtotal = (base + verticalPremium + durationPremium + flatAddons) * multiplier;
+        const total = Math.round(subtotal * (1 + percentAddons / 100));
+
+        tierLabel.textContent = label;
+        updateBars(level);
+        latestEstimate = total;
+        totalEl.textContent = formatCurrency(total);
+      }
+
+      complexityInput.addEventListener("input", computeTotal);
+      verticalSelect.addEventListener("change", computeTotal);
+      durationInputs.forEach((input) => input.addEventListener("change", computeTotal));
+      addons.forEach((addon) => addon.addEventListener("change", computeTotal));
+
+      proposalBtn?.addEventListener("click", () => {
+        const proposalText = buildProposalText();
+        const opened = openPrintableProposal(proposalText);
+        if (opened) {
+          setProposalStatus("Proposal opened in a print dialog. Save as PDF to export.", "success");
+          return;
+        }
+        downloadProposalFallback(proposalText);
+        setProposalStatus("Popup blocked. Downloaded a text proposal summary instead.", "warn");
+      });
+
+      computeTotal();
+    </script>
+    <script src="/assets/js/prelaunch-theme-toggle.js" defer></script>
+  </body>
+</html>

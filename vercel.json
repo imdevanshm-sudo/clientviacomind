@@ -1,0 +1,52 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "services.viacomindia.com"
+        }
+      ],
+      "destination": "/services/"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "work.viacomindia.com"
+        }
+      ],
+      "destination": "/work/"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "contact.viacomindia.com"
+        }
+      ],
+      "destination": "/contactus/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pages/spec-sheet.html",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/portfolio.html",
+      "destination": "/work/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/quote-calculator.html",
+      "destination": "/quote/",
+      "permanent": true
+    }
+  ]
+}

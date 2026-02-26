@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viacom India | Production Roadmap</title>
+    <meta
+      name="description"
+      content="Viacom India production roadmap across pre-production, production, post-production, and delivery."
+    />
+    <link rel="canonical" href="https://viacomindia.com/vi-network/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF3B30",
+              "background-light": "#f5f5f5",
+              "background-dark": "#050505",
+              "surface-dark": "#121212",
+              "border-dark": "#333333"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"]
+            },
+            boxShadow: {
+              neo: "4px 4px 0px 0px rgba(255, 255, 255, 0.1)",
+              "neo-primary": "4px 4px 0px 0px #FF3B30"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .timeline-line {
+        width: 2px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+      .light-timeline-line {
+        width: 2px;
+        background-color: #181110;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FF3B30;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 flex items-center justify-between border-b-2 border-black/10 dark:border-white/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-12">
+      <div class="flex items-center gap-8">
+        <a href="/" class="flex items-center gap-3 text-slate-900 dark:text-white">
+          <span class="material-symbols-outlined text-primary text-3xl">movie_filter</span>
+          <h1 class="text-xl font-bold tracking-tighter uppercase">VIACOM INDIA <span class="text-primary">|</span> PRODUCTION</h1>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/services/">Services</a>
+          <a class="text-sm font-bold uppercase text-primary" href="/vi-network/">Roadmap</a>
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/work/">Portfolio</a>
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/about-us/">About</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="hidden lg:flex items-center border border-black/20 dark:border-white/20 h-10 px-3 bg-white/80 dark:bg-surface-dark">
+          <span class="material-symbols-outlined text-gray-400 text-sm">search</span>
+          <input class="bg-transparent border-none text-slate-900 dark:text-white placeholder-gray-500 focus:ring-0 text-sm font-mono w-48" placeholder="SEARCH_DATABASE..." />
+        </div>
+        <a href="/contactus/" class="bg-primary hover:bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-6 h-10 flex items-center shadow-neo transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">
+          Login
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow relative w-full max-w-[1200px] mx-auto px-4 py-12 lg:px-8">
+      <div class="mb-16 text-center">
+        <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-4">Production<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-gray-500 dark:from-white dark:to-gray-500">Roadmap</span></h2>
+        <p class="text-gray-500 dark:text-gray-400 font-mono text-sm uppercase tracking-widest">Unified Digital Marketplace <span class="mx-2">//</span> Timeline v.2.0</p>
+      </div>
+
+      <div class="relative py-10">
+        <div class="timeline-line hidden dark:block md:block"></div>
+        <div class="light-timeline-line hidden md:block dark:hidden"></div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
+          <div class="md:hidden flex items-center gap-4 mb-4">
+            <div class="bg-slate-900 dark:bg-white text-white dark:text-black font-bold text-xl w-10 h-10 flex items-center justify-center border-2 border-slate-900 dark:border-white">01</div>
+            <div class="h-[2px] bg-slate-900 dark:bg-white flex-grow"></div>
+          </div>
+          <div class="md:text-right order-2 md:order-1">
+            <div class="inline-block bg-white dark:bg-surface-dark border border-black/10 dark:border-white/10 p-6 shadow-neo hover:border-primary/50 transition-all group w-full">
+              <div class="flex flex-col md:items-end gap-2 mb-4">
+                <h3 class="text-3xl font-bold uppercase">Pre-Production</h3>
+                <div class="font-mono text-xs text-primary bg-primary/10 px-2 py-1 uppercase">Status: Completed</div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+                Laying the groundwork. This phase involves finalizing the script, hiring cast and crew, finding locations, and determining the budget.
+              </p>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3">
+                  <span class="material-symbols-outlined text-gray-500 mb-2 text-xl">description</span>
+                  <p class="font-mono text-xs font-bold uppercase">Scripting</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3">
+                  <span class="material-symbols-outlined text-gray-500 mb-2 text-xl">group_add</span>
+                  <p class="font-mono text-xs font-bold uppercase">Casting</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 col-span-2">
+                  <span class="material-symbols-outlined text-gray-500 mb-2 text-xl">location_on</span>
+                  <p class="font-mono text-xs font-bold uppercase">Loc. Scouting</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center justify-center z-10">
+            <div class="bg-white dark:bg-background-dark border-2 border-slate-900 dark:border-white w-16 h-16 flex items-center justify-center mb-2">
+              <span class="text-2xl font-black">01</span>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="font-mono text-xs text-gray-500 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="block w-2 h-2 bg-gray-600"></span>
+                <span>DURATION: <span class="text-slate-900 dark:text-white">4 WEEKS</span></span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="block w-2 h-2 bg-gray-600"></span>
+                <span>DELIVERABLES: <span class="text-slate-900 dark:text-white">SHOOTING SCRIPT, CAST LIST</span></span>
+              </div>
+              <div class="mt-4 border-l-2 border-gray-300 dark:border-gray-800 pl-4">
+                <p class="text-gray-500 dark:text-gray-600">"Planning is bringing the future into the present so that you can do something about it now."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
+          <div class="md:hidden flex items-center gap-4 mb-4">
+            <div class="bg-primary text-white font-bold text-xl w-10 h-10 flex items-center justify-center border-2 border-primary">02</div>
+            <div class="h-[2px] bg-primary flex-grow"></div>
+          </div>
+          <div class="hidden md:block text-right order-1">
+            <div class="font-mono text-xs text-gray-500 space-y-4">
+              <div class="flex items-center justify-end gap-3">
+                <span>DURATION: <span class="text-primary font-bold">3 WEEKS</span></span>
+                <span class="block w-2 h-2 bg-primary"></span>
+              </div>
+              <div class="flex items-center justify-end gap-3">
+                <span>DELIVERABLES: <span class="text-primary font-bold">RAW FOOTAGE, DAILY RUSHES</span></span>
+                <span class="block w-2 h-2 bg-primary"></span>
+              </div>
+              <div class="mt-4 border-r-2 border-primary/30 pr-4">
+                <p class="text-primary">ACTIVE PHASE - DAY 12/21</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center justify-center z-10">
+            <div class="bg-primary border-2 border-primary w-20 h-20 flex items-center justify-center shadow-[0_0_30px_rgba(255,59,48,0.4)]">
+              <span class="text-3xl font-black text-white">02</span>
+            </div>
+            <div class="absolute top-24 w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+          </div>
+          <div class="order-2">
+            <div class="relative bg-white dark:bg-surface-dark border-2 border-primary p-6 shadow-neo-primary w-full">
+              <div class="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">Current Stage</div>
+              <div class="flex flex-col gap-2 mb-4">
+                <h3 class="text-3xl font-bold uppercase text-slate-900 dark:text-white">Production</h3>
+                <div class="font-mono text-xs text-primary uppercase animate-pulse">Status: In Progress</div>
+              </div>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+                The execution phase. Cameras are rolling. Principal photography is underway capturing all scenes as per the schedule.
+              </p>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="bg-background-light dark:bg-background-dark border border-primary/20 p-4 hover:bg-primary/10 transition-colors cursor-pointer group">
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="material-symbols-outlined text-primary text-xl">videocam</span>
+                    <span class="material-symbols-outlined text-primary text-xs opacity-0 group-hover:opacity-100">arrow_outward</span>
+                  </div>
+                  <p class="font-mono text-xs font-bold uppercase">Filming</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-primary/20 p-4 hover:bg-primary/10 transition-colors cursor-pointer group">
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="material-symbols-outlined text-primary text-xl">mic</span>
+                    <span class="material-symbols-outlined text-primary text-xs opacity-0 group-hover:opacity-100">arrow_outward</span>
+                  </div>
+                  <p class="font-mono text-xs font-bold uppercase">Sound</p>
+                </div>
+                <div class="col-span-2 bg-background-light dark:bg-background-dark border border-primary/20 p-3 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf8tZgZPgLM_4gswDiQ1xGin8SXsAl8vFOyFSO09XgjThbSvGnhScHlVBfjbh9MxHmCUv6qo8v-pkmasc12EI6P9fganZc3aoB7Xu4sqfP-gLcYbifBMEOT9TOIpJRUNuRcWXI4_ELWe71waD3GmYyijlld_ZgZ0P4KxDataGrxbo1Gx0iKoOj82BdZ8M0qds5bdcu-eB-uidHwcWHB5CbXySB457XmQQsOcrZ0l3PccWo1Ou6bWJF87ZR33jWS4uKEpEPbtu5_Jg')"></div>
+                    <div>
+                      <p class="text-xs font-mono text-gray-400">LEAD DIRECTOR</p>
+                      <p class="text-sm font-bold">SARAH JENKINS</p>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-primary">verified</span>
+                </div>
+              </div>
+            </div>
+            <div class="md:hidden mt-6 font-mono text-xs text-gray-500 space-y-2">
+              <p>DURATION: <span class="text-primary">3 WEEKS</span></p>
+              <p>STATUS: ACTIVE (DAY 12/21)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-24 opacity-70 hover:opacity-100 transition-opacity duration-500">
+          <div class="md:hidden flex items-center gap-4 mb-4">
+            <div class="bg-background-dark text-white font-bold text-xl w-10 h-10 flex items-center justify-center border-2 border-gray-600">03</div>
+            <div class="h-[2px] bg-gray-600 flex-grow"></div>
+          </div>
+          <div class="md:text-right order-2 md:order-1">
+            <div class="inline-block bg-white dark:bg-surface-dark border border-black/10 dark:border-white/10 p-6 shadow-none hover:shadow-neo transition-all w-full">
+              <div class="flex flex-col md:items-end gap-2 mb-4">
+                <h3 class="text-3xl font-bold uppercase text-gray-700 dark:text-gray-300">Post-Production</h3>
+                <div class="font-mono text-xs text-gray-500 border border-gray-700 px-2 py-1 uppercase">Status: Pending</div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-500 text-sm mb-6 leading-relaxed">
+                Editing, visual effects, sound design, and color grading. Shaping the raw footage into the final narrative.
+              </p>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 aspect-square flex flex-col justify-between">
+                  <span class="material-symbols-outlined text-gray-600">movie_edit</span>
+                  <p class="font-mono text-[10px] font-bold uppercase text-gray-400">Edit</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 aspect-square flex flex-col justify-between">
+                  <span class="material-symbols-outlined text-gray-600">auto_fix_high</span>
+                  <p class="font-mono text-[10px] font-bold uppercase text-gray-400">VFX</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 aspect-square flex flex-col justify-between">
+                  <span class="material-symbols-outlined text-gray-600">palette</span>
+                  <p class="font-mono text-[10px] font-bold uppercase text-gray-400">Color</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center justify-center z-10">
+            <div class="bg-white dark:bg-background-dark border-2 border-gray-600 text-gray-400 w-16 h-16 flex items-center justify-center">
+              <span class="text-2xl font-black">03</span>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="font-mono text-xs text-gray-600 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="block w-2 h-2 border border-gray-600"></span>
+                <span>DURATION: 5 WEEKS</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="block w-2 h-2 border border-gray-600"></span>
+                <span>DELIVERABLES: FINAL CUT, MASTER FILES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative grid md:grid-cols-2 gap-8 md:gap-16 items-center opacity-60 hover:opacity-100 transition-opacity duration-500">
+          <div class="md:hidden flex items-center gap-4 mb-4">
+            <div class="bg-background-dark text-white font-bold text-xl w-10 h-10 flex items-center justify-center border-2 border-gray-700">04</div>
+            <div class="h-[2px] bg-gray-700 flex-grow"></div>
+          </div>
+          <div class="hidden md:block text-right order-1">
+            <div class="font-mono text-xs text-gray-600 space-y-4">
+              <div class="flex items-center justify-end gap-3">
+                <span>DURATION: 1 WEEK</span>
+                <span class="block w-2 h-2 border border-gray-700"></span>
+              </div>
+              <div class="flex items-center justify-end gap-3">
+                <span>DELIVERABLES: BROADCAST MASTERS, WEB FILES</span>
+                <span class="block w-2 h-2 border border-gray-700"></span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center justify-center z-10">
+            <div class="bg-white dark:bg-background-dark border-2 border-gray-700 text-gray-500 w-16 h-16 flex items-center justify-center">
+              <span class="text-2xl font-black">04</span>
+            </div>
+          </div>
+          <div class="order-2">
+            <div class="bg-white dark:bg-surface-dark border border-black/10 dark:border-white/10 p-6 w-full">
+              <div class="flex flex-col gap-2 mb-4">
+                <h3 class="text-3xl font-bold uppercase text-gray-700 dark:text-gray-400">Delivery</h3>
+                <div class="font-mono text-xs text-gray-600 border border-gray-800 px-2 py-1 uppercase w-max">Status: Locked</div>
+              </div>
+              <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                Format conversion, quality control, and final handover of all assets to the client via secure servers.
+              </p>
+              <div class="flex gap-2">
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 flex-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-gray-700">cloud_upload</span>
+                  <p class="font-mono text-[10px] font-bold uppercase text-gray-500">Upload</p>
+                </div>
+                <div class="bg-background-light dark:bg-background-dark border border-black/5 dark:border-white/5 p-3 flex-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-gray-700">verified_user</span>
+                  <p class="font-mono text-[10px] font-bold uppercase text-gray-500">QC Check</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-900 dark:bg-white hidden md:block z-10"></div>
+      </div>
+    </main>
+
+    <div class="sticky bottom-0 z-40 w-full bg-white dark:bg-background-dark border-t border-black/10 dark:border-white/20 p-4 lg:p-6 backdrop-blur-lg">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="hidden md:flex flex-col">
+          <p class="text-xs font-mono text-gray-500 dark:text-gray-400 uppercase">Need a custom timeline?</p>
+          <p class="text-sm font-bold text-slate-900 dark:text-white uppercase">Our producers are ready to help.</p>
+        </div>
+        <a href="/contactus/" class="w-full md:w-auto bg-slate-900 dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 text-sm font-bold uppercase tracking-wider px-8 py-4 flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-[4px_4px_0px_0px_rgba(255,59,48,1)]">
+          <span>Book a Consultation</span>
+          <span class="material-symbols-outlined text-lg">calendar_month</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="/assets/js/prelaunch-theme-toggle.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaaS Explainer Spec Sheet | Viacom Production</title>
+    <meta
+      name="description"
+      content="SaaS explainer service spec sheet with workflow, ROI framing, and package comparison for enterprise buyers."
+    />
+    <link rel="canonical" href="https://viacomindia.com/services/" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/shared.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff3d33",
+              "background-light": "#f8f5f5",
+              "background-dark": "#181110",
+              surface: "#ffffff",
+              "text-main": "#181110",
+              "border-color": "#e7dbda"
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              body: ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "2px",
+              xl: "4px",
+              full: "9999px"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .arch-bg {
+        background-image: linear-gradient(rgba(248, 245, 245, 0.95), rgba(248, 245, 245, 0.95)),
+          url("https://lh3.googleusercontent.com/aida-public/AB6AXuBak5SPy8Pmof0cJonySkALgMt7qZ9Pt28NsPmdHdmhB84f3yY4G5qZAwVO9iN87Vg1L8Ap64nDgU8v1zwRwhWkzxD1Hyw3bd9vjUm9MZw_Q-EFQjeMmVZJiwJLuRAjAgtzHB2HZi4vAwU3GNjEUawSK1bbul8mcQUVk42-ir54BgizHpBr91p1VwWgAe5mtBQBQCUHqZtW7k4r9Bi6bOjxJef-moiJkjNdYcYJwqWwryjgp1hwlcuKKsiPLMIbHzo0jxVzWQECTXk");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .dark .arch-bg {
+        background-image: linear-gradient(rgba(12, 12, 12, 0.94), rgba(12, 12, 12, 0.94)),
+          url("https://lh3.googleusercontent.com/aida-public/AB6AXuBak5SPy8Pmof0cJonySkALgMt7qZ9Pt28NsPmdHdmhB84f3yY4G5qZAwVO9iN87Vg1L8Ap64nDgU8v1zwRwhWkzxD1Hyw3bd9vjUm9MZw_Q-EFQjeMmVZJiwJLuRAjAgtzHB2HZi4vAwU3GNjEUawSK1bbul8mcQUVk42-ir54BgizHpBr91p1VwWgAe5mtBQBQCUHqZtW7k4r9Bi6bOjxJef-moiJkjNdYcYJwqWwryjgp1hwlcuKKsiPLMIbHzo0jxVzWQECTXk");
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased h-screen flex flex-col overflow-hidden">
+    <header class="flex-none flex items-center justify-between whitespace-nowrap border-b border-text-main dark:border-white/20 bg-white dark:bg-[#0d0d0d] px-6 py-4 z-50">
+      <a href="/" class="flex items-center gap-4 text-text-main dark:text-white">
+        <div class="size-6 text-primary"><span class="material-symbols-outlined !text-3xl">play_circle</span></div>
+        <h2 class="text-xl font-bold leading-tight tracking-tight uppercase" data-brand-name>VIACOM PRODUCTION</h2>
+      </a>
+      <div class="flex flex-1 justify-end gap-8 hidden md:flex">
+        <div class="flex items-center gap-9">
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/services/">Services</a>
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/work/">Work</a>
+          <a class="text-sm font-bold uppercase hover:text-primary transition-colors" href="/quote/">Pricing</a>
+        </div>
+        <a href="/contactus/" class="flex min-w-[84px] items-center justify-center border border-text-main dark:border-white/20 bg-white dark:bg-[#0d0d0d] hover:bg-text-main hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors h-10 px-6 text-sm font-bold uppercase tracking-wide">
+          Login
+        </a>
+      </div>
+      <button type="button" id="menu-open" class="md:hidden text-text-main dark:text-white"><span class="material-symbols-outlined">menu</span></button>
+    </header>
+
+    <main class="flex flex-1 h-full overflow-hidden relative">
+      <aside id="sidebar" class="w-full lg:w-[30%] bg-white dark:bg-[#0d0d0d] border-r border-text-main dark:border-white/20 flex flex-col p-8 lg:p-10 gap-8 h-full overflow-y-auto z-20 absolute lg:relative transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col gap-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Service Spec #001</span>
+          <h1 class="text-4xl lg:text-5xl font-bold leading-[0.9] tracking-tighter uppercase">SaaS<br />Explainer</h1>
+        </div>
+        <div class="w-12 h-1 bg-primary"></div>
+
+        <div class="flex flex-col gap-1 mt-4">
+          <span class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase">Starting From</span>
+          <span class="text-6xl font-medium tracking-tighter">INR 75,000</span>
+        </div>
+
+        <div class="flex flex-col gap-4 mt-2">
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">schedule</span><span class="text-sm font-bold uppercase">5-7 Day Turnaround</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">mic</span><span class="text-sm font-bold uppercase">Pro Voiceover</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">movie_edit</span><span class="text-sm font-bold uppercase">Motion Graphics</span></div>
+        </div>
+
+        <div class="mt-auto pt-8">
+          <a href="/quote/" class="w-full h-14 bg-text-main dark:bg-white text-white dark:text-black text-lg font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-colors flex items-center justify-between px-6 group">
+            <span>Configure</span>
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <p class="text-xs text-gray-500 mt-4 leading-relaxed">By configuring this package, you agree to our standard production terms. Includes 2 rounds of revisions.</p>
+        </div>
+      </aside>
+
+      <section class="flex-1 h-full overflow-y-auto bg-background-light dark:bg-[#0b0b0b] w-full lg:w-[70%] arch-bg">
+        <div class="max-w-4xl mx-auto p-6 lg:p-16 flex flex-col gap-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border border-text-main dark:border-white/20 bg-white dark:bg-[#0d0d0d] p-8 relative">
+            <div class="absolute top-0 left-0 bg-primary text-white text-xs font-bold uppercase px-3 py-1">Exec Summary</div>
+            <div class="flex flex-col justify-center">
+              <h3 class="text-2xl font-bold uppercase mb-2 leading-tight">ROI Impact Analysis</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Deploying premium explainer assets typically yields a 240% increase in conversion rates for SaaS landing pages within the first quarter.</p>
+              <div class="flex gap-8">
+                <div><span class="block text-4xl font-bold tracking-tighter">3.5x</span><span class="text-xs text-gray-500 uppercase font-bold">Engagement</span></div>
+                <div><span class="block text-4xl font-bold tracking-tighter">45%</span><span class="text-xs text-gray-500 uppercase font-bold">Lower CAC</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-end items-end h-full min-h-[160px]">
+              <div class="flex items-end gap-2 h-32 w-full max-w-[200px]">
+                <div class="w-1/4 bg-gray-200 dark:bg-gray-700 h-[30%]"></div>
+                <div class="w-1/4 bg-gray-300 dark:bg-gray-600 h-[45%]"></div>
+                <div class="w-1/4 bg-gray-800 dark:bg-gray-500 h-[70%]"></div>
+                <div class="w-1/4 bg-primary h-[100%]"></div>
+              </div>
+              <div class="w-full max-w-[200px] border-t border-text-main dark:border-white/20 mt-2 pt-1 flex justify-between text-[10px] uppercase font-bold text-gray-400"><span>Initial</span><span>Projection</span></div>
+            </div>
+          </div>
+
+          <div class="w-full aspect-video bg-black relative group cursor-pointer overflow-hidden border border-text-main dark:border-white/20">
+            <img alt="Abstract colorful digital waves representing saas technology" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_24_yqzYBNd1lvowQ_8lB4h69fQCadx2ZdikqlE8R5iN1XEcZqHpqkt4o0oa8bh4a4GStcMTLpNNe5HanP7YEg8VHFqmGqAlIEw0c6Hf_-xW1Kxj4ues236Br9C9LUKLDHN6sleQ2VTSkHXDnvf73kH1d5dvGobmahqHn1Tusn48YerEps6DilHKK-2DRKr4TsVS9Y33yxuqQS6vZAgoJKRrPOln-rfQXd8tbOGDXrY0MtLZD9tkiKZtuY3Fhe1UYiNrbO4lflZA" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 flex items-center justify-center"><div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-white !text-4xl">play_arrow</span></div></div>
+            <div class="absolute bottom-6 left-6 text-white"><p class="font-bold uppercase tracking-wider text-sm">Featured Work</p><p class="text-2xl font-bold">Fintech Dashboard Intro</p></div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold uppercase tracking-tight mb-8 border-b border-text-main dark:border-white/20 pb-4 flex justify-between items-end"><span>Production Process</span><span class="text-sm font-normal text-gray-500 normal-case">Standard workflow</span></h2>
+            <div class="grid gap-0 backdrop-blur-sm bg-white/80 dark:bg-[#101010]/80 border border-transparent">
+              <div class="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-6 py-8 border-b border-gray-300 dark:border-white/20 px-4"><span class="text-5xl md:text-6xl font-light text-gray-300">01</span><div><h3 class="text-xl font-bold uppercase mb-2">Briefing &amp; Script</h3><p class="text-gray-600 dark:text-gray-400 mb-4 max-w-xl">We start by understanding your product. Fill out our structured questionnaire, and our copywriters will draft a compelling script within 24 hours.</p><div class="flex gap-2"><span class="px-2 py-1 bg-white dark:bg-black border border-gray-300 dark:border-white/20 text-xs uppercase font-bold">Day 1</span><span class="px-2 py-1 bg-white dark:bg-black border border-gray-300 dark:border-white/20 text-xs uppercase font-bold">Input Required</span></div></div></div>
+              <div class="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-6 py-8 border-b border-gray-300 dark:border-white/20 px-4"><span class="text-5xl md:text-6xl font-light text-gray-300">02</span><div><h3 class="text-xl font-bold uppercase mb-2">Storyboard &amp; Style</h3><p class="text-gray-600 dark:text-gray-400 mb-4 max-w-xl">Our designers create keyframes based on your brand guidelines. You'll see exactly how the video will look before we animate a single pixel.</p><div class="flex gap-2"><span class="px-2 py-1 bg-white dark:bg-black border border-gray-300 dark:border-white/20 text-xs uppercase font-bold">Day 2-3</span><span class="px-2 py-1 bg-white dark:bg-black border border-gray-300 dark:border-white/20 text-xs uppercase font-bold">Approval</span></div></div></div>
+              <div class="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-6 py-8 px-4"><span class="text-5xl md:text-6xl font-light text-text-main dark:text-white">03</span><div><h3 class="text-xl font-bold uppercase mb-2 text-primary">Animation &amp; Delivery</h3><p class="text-gray-600 dark:text-gray-400 mb-4 max-w-xl">Motion magic happens here. We add voiceover, sound effects, and music. Delivered in 4K and social-ready formats.</p><div class="flex gap-2"><span class="px-2 py-1 bg-primary text-white border border-primary text-xs uppercase font-bold">Day 5-7</span><span class="px-2 py-1 bg-white dark:bg-black border border-gray-300 dark:border-white/20 text-xs uppercase font-bold">Final Asset</span></div></div></div>
+            </div>
+          </div>
+
+          <div class="pb-20">
+            <h2 class="text-2xl font-bold uppercase tracking-tight mb-8 border-b border-text-main dark:border-white/20 pb-4">Package Comparison</h2>
+            <div class="w-full overflow-x-auto bg-white dark:bg-[#0d0d0d] p-4 border border-text-main dark:border-white/20">
+              <table class="w-full min-w-[600px] border-collapse text-left">
+                <thead>
+                  <tr>
+                    <th class="py-4 pr-4 border-b-2 border-text-main dark:border-white/20 w-1/4 align-bottom"><span class="text-xs text-gray-500 uppercase font-normal">Features</span></th>
+                    <th class="py-4 px-4 border-b-2 border-text-main dark:border-white/20 w-1/4 align-bottom"><h4 class="text-lg font-bold uppercase">Basic</h4><p class="text-sm font-normal text-gray-500">INR 75k</p></th>
+                    <th class="py-4 px-4 border-b-2 border-primary w-1/4 align-bottom bg-primary/5"><h4 class="text-lg font-bold uppercase text-primary">Pro</h4><p class="text-sm font-normal text-gray-500">INR 1.2L</p></th>
+                    <th class="py-4 pl-4 border-b-2 border-text-main dark:border-white/20 w-1/4 align-bottom"><h4 class="text-lg font-bold uppercase">Enterprise</h4><p class="text-sm font-normal text-gray-500">Custom</p></th>
+                  </tr>
+                </thead>
+                <tbody class="text-sm">
+                  <tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><td class="py-4 pr-4 border-b border-gray-300 dark:border-white/20 font-bold uppercase">Duration</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20">Up to 60s</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 bg-primary/5 font-bold">Up to 90s</td><td class="py-4 pl-4 border-b border-gray-300 dark:border-white/20">Unlimited</td></tr>
+                  <tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><td class="py-4 pr-4 border-b border-gray-300 dark:border-white/20 font-bold uppercase">Style</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20">Stock Motion</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 bg-primary/5 font-bold">Custom Vector</td><td class="py-4 pl-4 border-b border-gray-300 dark:border-white/20">3D / Mixed Media</td></tr>
+                  <tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><td class="py-4 pr-4 border-b border-gray-300 dark:border-white/20 font-bold uppercase">Voiceover</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20">AI Neural</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 bg-primary/5 font-bold">Human Pro</td><td class="py-4 pl-4 border-b border-gray-300 dark:border-white/20">Celebrity / Pro</td></tr>
+                  <tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><td class="py-4 pr-4 border-b border-gray-300 dark:border-white/20 font-bold uppercase">Revisions</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20">1 Round</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 bg-primary/5 font-bold">3 Rounds</td><td class="py-4 pl-4 border-b border-gray-300 dark:border-white/20">Unlimited</td></tr>
+                  <tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><td class="py-4 pr-4 border-b border-gray-300 dark:border-white/20 font-bold uppercase">Source Files</td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 text-gray-300"><span class="material-symbols-outlined text-sm">close</span></td><td class="py-4 px-4 border-b border-gray-300 dark:border-white/20 bg-primary/5 font-bold text-primary"><span class="material-symbols-outlined text-sm font-bold">check</span></td><td class="py-4 pl-4 border-b border-gray-300 dark:border-white/20 text-primary"><span class="material-symbols-outlined text-sm font-bold">check</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="border-t border-text-main dark:border-white/20 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs font-bold uppercase text-gray-400">
+            <p>© 2026 <span data-brand-name>Viacom India</span>.</p>
+            <div class="flex gap-4">
+              <a class="hover:text-primary" href="/privacy-policy/">Privacy</a>
+              <a class="hover:text-primary" href="/terms-and-condition/brand-terms-and-conditions/">Terms</a>
+              <a class="hover:text-primary" href="/contactus/">Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lg:hidden fixed inset-0 bg-black/50 z-10 hidden" id="sidebar-overlay"></div>
+
+    <script type="module">
+      import { hydrateSharedContent } from "/assets/js/site-content.js";
+      hydrateSharedContent().catch((error) => console.error(error));
+
+      const sidebar = document.getElementById("sidebar");
+      const openBtn = document.getElementById("menu-open");
+      const overlay = document.getElementById("sidebar-overlay");
+      function openSidebar() {
+        sidebar.classList.remove("-translate-x-full");
+        overlay.classList.remove("hidden");
+      }
+      function closeSidebar() {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+      }
+      openBtn?.addEventListener("click", openSidebar);
+      overlay?.addEventListener("click", closeSidebar);
+    </script>
+    <script src="/assets/js/prelaunch-theme-toggle.js" defer></script>
+  </body>
+</html>

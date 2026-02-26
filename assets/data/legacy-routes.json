@@ -1,0 +1,68 @@
+[
+  {
+    "old_path": "/",
+    "new_page": "/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/"
+  },
+  {
+    "old_path": "/about-us/",
+    "new_page": "/about-us/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/about-us/"
+  },
+  {
+    "old_path": "/contactus/",
+    "new_page": "/contactus/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/contactus/"
+  },
+  {
+    "old_path": "/creators/",
+    "new_page": "/creators/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/creators/"
+  },
+  {
+    "old_path": "/vi-network/",
+    "new_page": "/vi-network/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/vi-network/"
+  },
+  {
+    "old_path": "/terms-and-condition/brand-terms-and-conditions/",
+    "new_page": "/terms-and-condition/brand-terms-and-conditions/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/terms-and-condition/brand-terms-and-conditions/"
+  },
+  {
+    "old_path": "/terms-and-condition/creator-term-conditions/",
+    "new_page": "/terms-and-condition/creator-term-conditions/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/terms-and-condition/creator-term-conditions/"
+  },
+  {
+    "old_path": "/privacy-policy/",
+    "new_page": "/privacy-policy/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/privacy-policy/"
+  },
+  {
+    "old_path": "/works/",
+    "new_page": "/work/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/work/"
+  },
+  {
+    "old_path": "/services/",
+    "new_page": "/services/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/services/"
+  },
+  {
+    "old_path": "/quote/",
+    "new_page": "/quote/",
+    "status": "live",
+    "canonical": "https://viacomindia.com/quote/"
+  }
+]
